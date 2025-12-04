@@ -27,7 +27,7 @@ model = tf.keras.Sequential([
     tf.keras.layers.Dense(1, activation="sigmoid")
 ])
 
-model.compile("adam", "binary_crossentropy", metrics=["accuracy"])
+model.compile("nadam", "binary_crossentropy", metrics=["accuracy"])
 model.fit(x_vec, y, epochs=10, batch_size=32, verbose=0)
 
 # accuracy
