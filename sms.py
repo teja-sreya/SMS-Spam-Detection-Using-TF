@@ -20,7 +20,7 @@ vec = TextVectorization(max_tokens=5000, output_mode="int", output_sequence_leng
 vec.adapt(x)
 x_vec = vec(x)
 
-# tiny model
+# basic model
 model = tf.keras.Sequential([
     tf.keras.layers.Embedding(5000, 8),
     tf.keras.layers.GlobalAveragePooling1D(),
